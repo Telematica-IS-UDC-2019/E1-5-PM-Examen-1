@@ -4,11 +4,14 @@
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="./assets/images/logos/marca-logo-s.png" />
+  <link rel="icon" type="image/png" href="./assets/images/logos/marca-logo-s-r.png" />
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="./css/social-media-icons.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/fc3fec0390.js" crossorigin="anonymous"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100&family=Lexend+Deca:wght@300&display=swap"
     rel="stylesheet" />
@@ -40,20 +43,32 @@
     }
 
     .custom-toggler .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(3,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(3,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
     }
 
     .custom-toggler.navbar-toggler {
-    border-color: rgb(3,0,0);
-    } 
+      border-color: rgb(3, 0, 0);
+    }
+
+    .prueba {
+      position: absolute;
+      margin-left: 175px;
+      height: 37px;
+      display: flex;
+      align-items: center;
+    }
   </style>
 </head>
 
 <body>
+  <!--navbar principal persistente-->
   <nav class="autohide navbar navbar-expand-lg navbar-dark bg-danger fixed-top" hidden>
     <div class="container-fluid justify-content-center">
       <div class="collapse navbar-collapse mb-0" id="navbarSecondary">
-        <ul class="navbar-nav mb-2 mb-lg-0">
+        <ul class="navbar-nav mb-2 mb-lg-0 ps-lg-5">
+          <li class="nav-item">
+            <img src="./assets/images/logos/marca-logo-s-w.png" width="40px" height="40px">
+          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -128,51 +143,55 @@
         aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <form class="col-lg-auto col-sm-10 mb-lg-0 mb-sm-0 me-lg-3 d-inline-flex ps-1 mb-0">
-        <input type="search" class="form-control form-control-dark" placeholder="Buscar en marca.com"
-          aria-label="Search">
-      </form>
+      <button type="button" class="btn"><span class="fa fa-search fa-lg" style="transform: scaleX(-1)" height="25px"
+          width="25px"></span></button>
+      <button type="button" class="btn btn-light text-danger" style="border-color: #CACACA;">Suscribete</button>
+      <button type="button" class="btn btn-danger">Iniciar sesión</button>
     </div>
   </nav>
+  <!--navbar principal blanca-->
   <nav class="navbar tam navbar-expand-lg navbar-dark bg-light">
     <a class="navbar-brand cent" href="#"><img src="./assets/images/logos/marca-logo-m.png" width="180" height="50"></a>
-    <div class="container-fluid justify-content-start">
-      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarPrimary"
-        aria-controls="navbarPrimary" aria-expanded="false" aria-label="Toggle navigation" style="border-color: red">
+
+    <div class="container-fluid justify-content-end">
+      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
+        data-bs-target="#navbarPrimary" aria-controls="navbarPrimary" aria-expanded="false"
+        aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarPrimary">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-          <!--
-            <div class="navbar-nav mx-auto">
-              <li>
-                <ul class="mx-auto">
-                    <img src="./assets/images/logos/marca-logo-m.png" height="40%" weight="40%">
-                </ul>
-              </li>
-            </div>
-          -->
+          <li class="nav-item">
+            <ul>
+              <a class="navbar-brand text-dark fs-6 fw-bold" href="#"> <img src="./assets/images/logos/portada-marca.jpg" width="47" height="50">
+              <span>La portada de hoy</span></a>
+              <a class="navbar-brand text-dark fs-6 fw-bold" href="#"> <img src="./assets/images/logos/radio-marca.png" width="60" height="50">
+              <span>Radio MARCA</span></a>
+              <a class="navbar-brand text-dark fs-6 fw-bold" href="#"> <img src="./assets/images/logos/fantasy-marca.jpg" width="50" height="50">
+              <span>Laliga Fantasy MARCA</span></a>
+            </ul>
+          </li>
           <li class="nav-item">
             <ul class="ms-auto ms-lg-5">
               <div class="dropdown">
                 <div href="#" class="link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
-                  aria-expanded="false" style="cursor: pointer">
-                  <img src="./assets/images/svg/flags/spain.svg" alt="País">
+                  aria-expanded="true" style="cursor: pointer">
+                  <img src="./assets/images/svg/flags/spain.svg" height="40px" alt="País">
                   ES
                 </div>
                 <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
                   <li class="dropdown-item active" style="cursor: pointer" aria-current="true">
-                    <img src="./assets/images/svg/flags/spain.svg" alt="ES" height="25px" weight="10px">
+                    <img src="./assets/images/svg/flags/spain.svg" alt="ES" height="25px">
                     <a>ES (España)</a>
                   </li>
                   <hr class="dropdown-divider">
                   <li class="dropdown-item" style="cursor: pointer" aria-current="true">
-                    <img src="./assets/images/svg/flags/earth.svg" alt="EN" height="25px" weight="10px">
+                    <img src="./assets/images/svg/flags/earth.svg" alt="EN" height="25px">
                     <a>EN (English)</a>
                   </li>
                   <hr class="dropdown-divider">
                   <li class="dropdown-item" style="cursor: pointer" aria-current="true">
-                    <img src="./assets/images/svg/flags/mexico.svg" alt="MX" height="25px" weight="10px">
+                    <img src="./assets/images/svg/flags/mexico.svg" alt="MX" height="25px">
                     <a>MX (México)</a>
                   </li>
                 </ul>
@@ -196,10 +215,11 @@
       </div>
     </div>
   </nav>
+  <!--navbar secundaria roja-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
     <div class="container-fluid justify-content-center">
       <div class="collapse navbar-collapse mb-0" id="navbarSecondary">
-        <ul class="navbar-nav mb-2 mb-lg-0">
+        <ul class="navbar-nav mb-2 mb-lg-0 ps-lg-5">
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -277,10 +297,40 @@
       <form class="col-lg-auto col-sm-10 mb-lg-0 mb-sm-0 me-lg-3 d-inline-flex ps-1 mb-0">
         <input type="search" class="form-control form-control-dark" placeholder="Buscar en marca.com"
           aria-label="Search">
+        <span class="prueba">
+          <i class="fa fa-search" style="transform: scaleX(-1)"></i>
+        </span>
       </form>
     </div>
   </nav>
   <div>
+<!--Navbar de equipos futbol-->
+    <nav class="navbar navbar-light bg-secondary" style="--bs-bg-opacity: .1;">
+      <div class="container-fluid d-flex justify-content-center">
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/1.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/2.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/3.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/4.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/5.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/6.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/7.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/8.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/9.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/10.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/11.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/12.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/13.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/14.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/15.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/16.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/17.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/18.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/19.png" width="30" height="30"></a>
+        <a class="navbar-brand" href="#"><img src="./assets/images/teams/20.png" width="30" height="30"></a>
+        <a class="navbar-brand ps-4" href="#"><img src="./assets/images/logos/marca-apuestas.png" width="150" height="40"></a>
+      </div>
+    </nav>
+    <!--Anuncio caliente.mx-->
     <div class="row">
       <div class="d-flex justify-content-center p-2">
         <a href="https://caliente.mx">
@@ -288,14 +338,80 @@
         </a>
       </div>
     </div>
+    <!--Agenda-->
+    
+    <div class="row my-2">
+      <div class="col-7 sm-12">
+        <div class="row align-items-center">
+          
+          <div class="col-2 fw-bold d-flex justify-content-center fs-3 pe-1">
+            Agenda
+          </div>
+          
+          <div class="col-5 sm-6">
+            <div class="row mx-1 sm-6">
+              <div class="col-4 sm-6 bg-danger text-white fw-bold">
+                En directo
+              </div>
+              <!--YA VALIO VERGA JOSUEEEEEEEEEEEEEEEEEEEEE CAAAAAAAAAAAAAAAAAAAAAAA-->
+              <div class="col-8 sm-6 bg-secondary lh-base fw-bold" style="--bs-bg-opacity: .1;">
+                Todas las noticias <br> Última hora
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-5 sm-6">
+            <div class="row sm-6">
+              <div class="col-4 sm-6 bg-danger text-white fw-bold ">
+                Lo mejor del día
+              </div>
+              <div class="col-8 sm-6 bg-secondary lh-base fw-bold" style="--bs-bg-opacity: .1;">
+                Agenda <br> Jueves 23
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-5  d-flex justify-content-end">
+        <a class="dropdown">
+          <a class="nav-link dropdown-toggle text-black fw-normal text-black-50" href="#" id="navbarDropdownDirectos" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Ver más directos
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownDirectos">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li>
+              <hr class="dropdown-divider" />
+            </li>
+            <li>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </li>
+          </ul>
+        </a>
+      </div>
+    </div>
+
+    <!--Cards de la primer captura-->
     <div class="row">
       <div class="col-md-8">
+        <div class="card border-white">
+          <img class="card-img-top" src="./assets/images/banners/Sub-photo-1.jpg" />
+          <div class="card-img-overlay position-sticky-bottom">
+            <h5 class="card-title">Card title</h5>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">CONTRATRÓNICA</h5>
+          </div>
+        </div>
       </div>
-      <div class="col-md-3">
+      <div class="col-md-4">
         <div class="card border-white">
           <div class="row">
             <div class="col-6">
-              <img class="card-img-top" src="./assets/images/slide1.jpg" />
+              <img class="card-img-top" src="./assets/images/banners/Sub-photo-1.jpg" />
             </div>
             <div class="col-6">
               <div class="card-body">
@@ -324,14 +440,28 @@
         <div class="card border-white">
           <div class="row">
             <div class="col-6">
-              <img class="card-img-top" src="" />
+              <img class="card-img-top" src="./assets/images/banners/Sub-photo-1.jpg" />
             </div>
             <div class="col-6">
               <div class="card-body">
-                <h5 class="card-title">UNO A UNO</h5>
+                <h5 class="card-title">CONTRATRÓNICA</h5>
                 <p class="card-text">
-                  Aquí no se salva nadie
+                  Lo mejor es irse: Koeman del banquillo y el Barça de Europa
                 </p>
+              </div>
+            </div>
+            <div class="card-footer border-white bg-transparent">
+              <div class="row">
+                <div class="col-6">
+                  <p align="left">
+                    RAMIRO ALDUNATE
+                  </p>
+                </div>
+                <div class="col-6" align="right">
+                  <p>
+                    RAMIRO ALDUNATE
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -339,39 +469,39 @@
         <div class="card border-white">
           <div class="row">
             <div class="col-6">
-              <img class="card-img-top" src="./assets/images/slide1.jpg" />
+              <img class="card-img-top" src="./assets/images/banners/Sub-photo-1.jpg" />
             </div>
             <div class="col-6">
               <div class="card-body">
-                <h5 class="card-title">KOEMAN</h5>
+                <h5 class="card-title">CONTRATRÓNICA</h5>
                 <p class="card-text">
-                  "Todo el mundo sabe cuál es el problema del Barça hoy en día"
+                  Lo mejor es irse: Koeman del banquillo y el Barça de Europa
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-        <div class="card border-white">
-          <div class="row">
-            <div class="col-6">
-              <img class="card-img-top" src="" />
-            </div>
-            <div class="col-6">
-              <div class="card-body">
-                <h5 class="card-title">PRENSA</h5>
-                <p class="card-text">
-                  "Ridículo continental", "Derrota humillante"....
-                </p>
+            <div class="card-footer border-white bg-transparent">
+              <div class="row">
+                <div class="col-6">
+                  <p align="left">
+                    RAMIRO ALDUNATE
+                  </p>
+                </div>
+                <div class="col-6" align="right">
+                  <p>
+                    RAMIRO ALDUNATE
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
     </div>
+    <!--Cards de la segunda captura-->
     <div class="row">
       <div class="col-4">
         <div class="card border-white">
-          <img class="card-img-top" src="./assets/images/slide1.jpg" />
+          <img class="card-img-top" src="./assets/images/banners/Sub-photo-2.jpg" />
           <div class="card-body">
             <h5 class="card-title">CONTRATRÓNICA</h5>
           </div>
@@ -379,7 +509,7 @@
       </div>
       <div class="col-4">
         <div class="card border-white">
-          <img class="card-img-top" src="./assets/images/slide1.jpg" />
+          <img class="card-img-top" src="./assets/images/banners/Sub-photo-2.jpg" />
           <div class="card-body">
             <h5 class="card-title">CONTRATRÓNICA</h5>
           </div>
@@ -387,7 +517,7 @@
       </div>
       <div class="col-4">
         <div class="card border-white">
-          <img class="card-img-top" src="./assets/images/slide1.jpg" />
+          <img class="card-img-top" src="./assets/images/banners/Sub-photo-2.jpg" />
           <div class="card-body">
             <h5 class="card-title">CONTRATRÓNICA</h5>
           </div>
@@ -395,11 +525,39 @@
       </div>
     </div>
     <div class="row">
+      <ul class="nav">
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-bold" aria-current="page" href="#">Es noticia:</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">Mercado de fichajes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">Rodrigo</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">Fernando Alonso</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">Levandovsky</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">Usain Bolt</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">Donald Trump</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-dark" href="#">Calendario Liga</a>
+        </li>
+      </ul>
+    </div>
+    <div class="row">
       <div class="col-4">
         <div class="card border-white">
           <div class="row">
             <div class="col-6">
-              <img class="card-img-top" src="./assets/images/slide1.jpg" />
+              <img class="card-img-top" src="./assets/images/banners/Sub-photo-3.jpg" />
             </div>
             <div class="col-6">
               <div class="card-body">
@@ -432,7 +590,7 @@
         <div class="card border-white">
           <div class="row">
             <div class="col-6">
-              <img class="card-img-top" src="./assets/images/slide1.jpg" />
+              <img class="card-img-top" src="./assets/images/banners/Sub-photo-3.jpg" />
             </div>
             <div class="col-6">
               <div class="card-body">
@@ -463,7 +621,7 @@
     <div class="row">
       <div class="col-4">
         <div class="card border-white">
-          <img class="card-img-top" src="./assets/images/slide1.jpg" />
+          <img class="card-img-top" src="./assets/images/banners/Sub-photo-3.jpg" />
           <div class="card-body">
             <h5 class="card-title">CONTRATRÓNICA</h5>
           </div>
@@ -471,213 +629,104 @@
       </div>
       <div class="col-4">
         <div class="card border-white">
-          <img class="card-img-top" src="./assets/images/slide1.jpg" />
+          <img class="card-img-top" src="./assets/images/banners/Sub-photo-3.jpg" />
           <div class="card-body">
             <h5 class="card-title">CONTRATRÓNICA</h5>
           </div>
         </div>
       </div>
       <div class="col-4">
-      </div>
-    </div>
-    <div>
-      <div class="container p-5">
-        <h1 class="h1 text-center">Lorem , ipsum dolor.</h1>
-        <p class="lead text-center text-primary">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat.
-        </p>
-      </div>
-    </div>
-    <div class="container-fluid">
-      <div class="row justify-content-center mb-5">
-        <div class="col-md-3 me-3">
-          <div class="card">
-            <img class="card-img-top" src="./assets/images/slide1.jpg" />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <a href="#" class="btn btn-primary">Más información</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 me-3">
-          <div class="card">
-            <img class="card-img-top" src="./assets/images/slide2.jpg" />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <a href="#" class="btn btn-primary">Más información</a>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-3 me-3">
-          <div class="card">
-            <img class="card-img-top" src="./assets/images/slide3.jpg" />
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                This is a wider card with supporting text below as a natural
-                lead-in to additional content. This content is a little bit
-                longer.
-              </p>
-              <a href="#" class="btn btn-primary">Más información</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="bg-light p-5">
-      <div class="container justify-content-center">
-        <div class="jumbotron">
-          <h1 class="display-4">Hello, world!</h1>
-          <p class="lead">
-            This is a simple hero unit, a simple jumbotron-style component for
-            calling extra attention to featured content or information.
-          </p>
-          <hr class="my-4" />
-          <p class="lead">
-            It uses utility classes for typography and spacing to space
-            content out within the larger container.
-          </p>
-          <p class="lead">
-            <a class="btn btn-primary btn-sm" href="#" role="button">Learn more</a>
-          </p>
-        </div>
-      </div>
-    </div>
-    <div class="p-2">
-      <div class="container">
-        <div class="row justify-content-center mb-4">
-          <div class="container p-5">
-            <h1 class="h1 text-center">Lorem , ipsum dolor.</h1>
-            <p class="lead text-center text-primary">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </p>
-          </div>
-          <div class="col-md-6">
-            <div id="accordion">
-              <div class="card">
-                <div class="card-header bg-primary" id="headingOne">
-                  <h5 class="mb-0">
-                    <button class="btn text-light" data-bs-toggle="collapse" data-bs-target="#collapseOne"
-                      aria-expanded="false" aria-controls="collapseOne">
-                      Collapsible Group Item #1
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
-                  <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. 3 wolf moon officia
-                    aute, non cupidatat skateboard dolor brunch. Food truck
-                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                    tempor, sunt aliqua put a bird on it squid single-origin
-                    coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                    helvetica, craft beer labore wes anderson cred nesciunt
-                    sapiente ea proident. Ad vegan excepteur butcher vice
-                    lomo. Leggings occaecat craft beer farm-to-table, raw
-                    denim aesthetic synth nesciunt you probably haven't heard
-                    of them accusamus labore sustainable VHS.
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header bg-primary" id="headingTwo">
-                  <h5 class="mb-0">
-                    <button class="btn text-light collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo"
-                      aria-expanded="false" aria-controls="collapseTwo">
-                      Collapsible Group Item #2
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-                  <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. 3 wolf moon officia
-                    aute, non cupidatat skateboard dolor brunch. Food truck
-                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                    tempor, sunt aliqua put a bird on it squid single-origin
-                    coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                    helvetica, craft beer labore wes anderson cred nesciunt
-                    sapiente ea proident. Ad vegan excepteur butcher vice
-                    lomo. Leggings occaecat craft beer farm-to-table, raw
-                    denim aesthetic synth nesciunt you probably haven't heard
-                    of them accusamus labore sustainable VHS.
-                  </div>
-                </div>
-              </div>
-              <div class="card">
-                <div class="card-header bg-primary" id="headingThree">
-                  <h5 class="mb-0">
-                    <button class="btn text-light collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree"
-                      aria-expanded="false" aria-controls="collapseThree">
-                      Collapsible Group Item #3
-                    </button>
-                  </h5>
-                </div>
-                <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-                  <div class="card-body">
-                    Anim pariatur cliche reprehenderit, enim eiusmod high life
-                    accusamus terry richardson ad squid. 3 wolf moon officia
-                    aute, non cupidatat skateboard dolor brunch. Food truck
-                    quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon
-                    tempor, sunt aliqua put a bird on it squid single-origin
-                    coffee nulla assumenda shoreditch et. Nihil anim keffiyeh
-                    helvetica, craft beer labore wes anderson cred nesciunt
-                    sapiente ea proident. Ad vegan excepteur butcher vice
-                    lomo. Leggings occaecat craft beer farm-to-table, raw
-                    denim aesthetic synth nesciunt you probably haven't heard
-                    of them accusamus labore sustainable VHS.
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6">
-            <img src="./assets/images/slide1.jpg" class="img-fluid" />
-            <div class="list-group" id="list-tab" role="tablist">
-              <a class="list-group-item list-group-item-action active" id="list-home-list" data-bs-toggle="list"
-                href="#list-home" role="tab" aria-controls="list-home">Cras justo odio</a>
-              <a class="list-group-item list-group-item-action" id="list-profile-list" data-bs-toggle="list"
-                href="#list-profile" role="tab" aria-controls="list-profile">Dapibus ac facilisis in</a>
-              <a class="list-group-item list-group-item-action" id="list-messages-list" data-bs-toggle="list"
-                href="#list-messages" role="tab" aria-controls="list-messages">Morbi leo risus</a>
-              <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
-                href="#list-settings" role="tab" aria-controls="list-settings">Porta ac consectetur ac</a>
-              <a class="list-group-item list-group-item-action" id="list-settings-list" data-bs-toggle="list"
-                href="#list-settings" role="tab" aria-controls="list-settings">Vestibulum at eros</a>
-            </div>
-          </div>
-        </div>
       </div>
     </div>
     <div class="justify-content-center">
-      <div class="col-md col-sm bg-dark">
-        <h1 class="lead fs-6 text-center text-light mx-auto my-auto py-3 w-75">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-          ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur.
-        </h1>
+      <div class="bg-dark text-white p-5">
+        <div class="container justify-content-center">
+          <div class="jumbotron">
+            <h1 class="lead text-center fw-bold">Otras webs de Unidad Editorial</h1>
+            <hr class="my-4" />
+            <div class="row">
+              <div class="col-3">
+                <table>
+                  <ul class="lead fw-bold">Marca</ul>
+                </table>
+                <table>
+                  <ul>App marca</ul>
+                  <ul>Apuestas deportiva</ul>
+                  <ul>Clasificación LaLiga</ul>
+                  <ul>Calendario LaLiga</ul>
+                  <ul>Hemeroteca Marca</ul>
+                  <ul>Marca eSports</ul>
+                  <ul>Marca Madrid</ul>
+                  <ul>Marca en Orbyt</ul>
+                  <ul>Zona marca</ul>
+                </table>
+              </div>
+              <div class="col-3">
+                <table>
+                  <ul class="lead fw-bold">Ocio y moda</ul>
+                </table>
+                <table>
+                  <ul>Tiramiles</ul>
+                  <ul>Moda - Telvs </ul>
+                  <ul>BUHO Maganize</ul>
+                  <ul>Traductor</ul>
+                  <ul>Programación TV</ul>
+                  <ul>Marca Entradas</ul>
+                  <ul>Mi bebé y yo</ul>
+                </table>
+              </div>
+              <div class="col-3">
+                <table>
+                  <ul class="lead fw-bold">Marca</ul>
+                </table>
+                <table>
+                  <ul>El Mundo</ul>
+                  <ul>Expansión</ul>
+                  <ul>CuidatePlus</ul>
+                  <ul>Diario Médico</ul>
+                  <ul>Correo farmacéutico</ul>
+                  <ul>Suscripción Marca</ul>
+                  <ul>Suscripción El Mundo</ul>
+                </table>
+              </div>
+              <div class="col-3">
+                <table>
+                  <ul class="lead fw-bold">Marca</ul>
+                </table>
+                <table>
+                  <ul>Escuela Unidad Editorial</ul>
+                  <ul>Unidad Editorial</ul>
+                  <ul>Expansión y Empleo</ul>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white p-5">
+        <h1 class="lead text-center fw-bold">© Agosto 2018 Unidad Editorial Información Deportiva, S.L.U. Todos los
+          derechos reservados.</h1>
+        <div class="row justify-content-center">
+          <p class="col-auto">Términos y condiciones</p>
+          <p class="col-auto">Política de privacidad</p>
+          <p class="col-auto">Política de cookies</p>
+          <p class="col-auto">Certificado por OJD</p>
+          <p class="col-auto">Contacto</p>
+          <p class="col-auto">Publicidad</p>
+          <p class="col-auto">Ayuda</p>
+          <p class="col-auto">Nuestro equipo</p>
+          <p class="col-auto">Venta de contenidos</p>
+        </div>
+        <br>
+        <h1 class="lead text-center fw-bold fs-6">Siguenos en</h1>
+        <div class="row justify-content-center">
+          <a href="#" class="col-auto fa social fa-facebook"></a>
+          <a href="#" class="col-auto fa social fa-twitter"></a>
+          <a href="#" class="col-auto fa social fa-google"></a>
+          <a href="#" class="col-auto fa social fa-rss "></a>
+        </div>
       </div>
     </div>
-  </div>
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
@@ -701,4 +750,5 @@
     });
   }
 </script>
+
 </html>
