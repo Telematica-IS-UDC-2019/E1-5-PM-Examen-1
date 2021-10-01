@@ -9,66 +9,21 @@
     integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="./css/custom.css">
   <link rel="stylesheet" href="./css/social-media-icons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <script src="https://kit.fontawesome.com/fc3fec0390.js" crossorigin="anonymous"></script>
   <link
     href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100&family=Lexend+Deca:wght@300&display=swap"
     rel="stylesheet" />
   <title>MARCA</title>
-  <style>
-    .navbar-brand.cent {
-      width: 98vw;
-      position: absolute;
-      top: 10;
-    }
-
-    .navbar-brand.cent img {
-      display: block;
-      margin: auto;
-    }
-
-    .tam {
-      min-height: 80px;
-    }
-
-    .scrolled-down {
-      transform: translateY(-100%);
-      transition: all 0.3s ease-in-out;
-    }
-
-    .scrolled-up {
-      transform: translateY(0);
-      transition: all 0.3s ease-in-out;
-    }
-
-    .custom-toggler .navbar-toggler-icon {
-      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(3,0,0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
-    }
-
-    .custom-toggler.navbar-toggler {
-      border-color: rgb(3, 0, 0);
-    }
-
-    .prueba {
-      position: absolute;
-      margin-left: 175px;
-      height: 37px;
-      display: flex;
-      align-items: center;
-    }
-  </style>
 </head>
-
 <body>
   <!--navbar principal persistente-->
   <nav class="autohide navbar navbar-expand-lg navbar-dark bg-danger fixed-top" hidden>
     <div class="container-fluid justify-content-center">
+      <img src="./assets/images/logos/marca-logo-s-w.png" width="40px" height="40px">
       <div class="collapse navbar-collapse mb-0" id="navbarSecondary">
         <ul class="navbar-nav mb-2 mb-lg-0 ps-lg-5">
-          <li class="nav-item">
-            <img src="./assets/images/logos/marca-logo-s-w.png" width="40px" height="40px">
-          </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
               aria-expanded="false">
@@ -138,10 +93,10 @@
           </li>
         </ul>
       </div>
-      <button class="navbar-toggler col-sm-2 mb-0" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarSecondary" aria-controls="navbarSecondary" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler col-sm-1 mb-0" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSecondary" aria-controls="navbarSecondary" aria-expanded="false"
+      aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
       </button>
       <button type="button" class="btn"><span class="fa fa-search fa-lg" style="transform: scaleX(-1)" height="25px"
           width="25px"></span></button>
@@ -150,70 +105,88 @@
     </div>
   </nav>
   <!--navbar principal blanca-->
-  <nav class="navbar tam navbar-expand-lg navbar-dark bg-light">
-    <a class="navbar-brand cent" href="#"><img src="./assets/images/logos/marca-logo-m.png" width="180" height="50"></a>
-
-    <div class="container-fluid justify-content-end">
-      <button class="navbar-toggler custom-toggler" type="button" data-bs-toggle="collapse"
-        data-bs-target="#navbarPrimary" aria-controls="navbarPrimary" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarPrimary">
-        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+  <nav class="navbar navbar-light navbar-expand-lg bg-light">
+    <div class="container-fluid justify-content-center">
+      <div class="collapse navbar-collapse mb-0 ms-4" id="navbarPrimary">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <ul>
-              <a class="navbar-brand text-dark fs-6 fw-bold" href="#"> <img src="./assets/images/logos/portada-marca.jpg" width="47" height="50">
-              <span>La portada de hoy</span></a>
-              <a class="navbar-brand text-dark fs-6 fw-bold" href="#"> <img src="./assets/images/logos/radio-marca.png" width="60" height="50">
-              <span>Radio MARCA</span></a>
-              <a class="navbar-brand text-dark fs-6 fw-bold" href="#"> <img src="./assets/images/logos/fantasy-marca.jpg" width="50" height="50">
-              <span>Laliga Fantasy MARCA</span></a>
-            </ul>
+            <a class="navbar-brand text-dark fs-6 fw-bold nav-link" href="#"> <img src="./assets/images/logos/portada-marca.jpg" width="47" height="50">
+            <span>La portada de hoy</span></a>
+           </li>
+          <li class="nav-item">
+            <a class="navbar-brand text-dark fs-6 fw-bold nav-link" href="#"> <img src="./assets/images/logos/radio-marca.png" width="60" height="50">
+            <span>Radio MARCA</span></a>
           </li>
           <li class="nav-item">
-            <ul class="ms-auto ms-lg-5">
-              <div class="dropdown">
-                <div href="#" class="link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
-                  aria-expanded="true" style="cursor: pointer">
-                  <img src="./assets/images/svg/flags/spain.svg" height="40px" alt="País">
-                  ES
-                </div>
-                <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
-                  <li class="dropdown-item active" style="cursor: pointer" aria-current="true">
-                    <img src="./assets/images/svg/flags/spain.svg" alt="ES" height="25px">
-                    <a>ES (España)</a>
-                  </li>
-                  <hr class="dropdown-divider">
-                  <li class="dropdown-item" style="cursor: pointer" aria-current="true">
-                    <img src="./assets/images/svg/flags/earth.svg" alt="EN" height="25px">
-                    <a>EN (English)</a>
-                  </li>
-                  <hr class="dropdown-divider">
-                  <li class="dropdown-item" style="cursor: pointer" aria-current="true">
-                    <img src="./assets/images/svg/flags/mexico.svg" alt="MX" height="25px">
-                    <a>MX (México)</a>
-                  </li>
-                </ul>
-              </div>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <ul class="ms-auto ms-lg-5">
-              <div class="d-flex align-items-center">
-                <button type="button" class="btn btn-danger">Suscribete</button>
-              </div>
-            </ul>
-          </li>
-          <li class="nav-item">
-            <ul class="">
-              <button type="button" class="btn btn-light text-danger" style="border-color: #cacaca;">Iniciar
-                sesión</button>
-            </ul>
+            <a class="navbar-brand text-dark fs-6 fw-bold nav-link" href="#"> <img src="./assets/images/logos/fantasy-marca.jpg" width="50" height="50">
+            <span>Laliga Fantasy MARCA</span></a>
           </li>
         </ul>
       </div>
+
+      <!-- Logo brand MARCA-->
+      <div>
+        <a class="navbar-brand ms-0 col-sm-auto col-md-auto col-lg-auto me-5 " href="#"><img src="./assets/images/logos/marca-logo-m.png" width="180" height="50"></a>
+        <button class="navbar-toggler col-sm-auto col-lg-auto col-md-auto custom-toggler justify-content-end" type="button" data-bs-toggle="collapse" 
+          data-bs-target="#navbarPrimary" aria-controls="navbarPrimary" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse mb-0 col-4 justify-content-end" id="navbarPrimary">
+        <ul class="navbar-nav me-5 mb-2 mb-lg-0">
+            <div>
+              <li class="nav-item align-items-center">
+                <ul class="ms-auto ms-lg-5" >
+                  <div class="dropdown" style="top:1;">
+                    <div href="#" class="link-dark text-decoration-none dropdown-toggle" data-bs-toggle="dropdown"
+                      aria-expanded="true" style="cursor: pointer">
+                      <img src="./assets/images/svg/flags/spain.svg" height="40px" alt="País">
+                      ES
+                    </div>
+                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                      <li class="dropdown-item active" style="cursor: pointer" aria-current="true">
+                        <img src="./assets/images/svg/flags/spain.svg" alt="ES" height="25px">
+                        <a>ES (España)</a>
+                      </li>
+                      <hr class="dropdown-divider">
+                      <li class="dropdown-item" style="cursor: pointer" aria-current="true">
+                        <img src="./assets/images/svg/flags/earth.svg" alt="EN" height="25px">
+                        <a>EN (English)</a>
+                      </li>
+                      <hr class="dropdown-divider">
+                      <li class="dropdown-item" style="cursor: pointer" aria-current="true">
+                        <img src="./assets/images/svg/flags/mexico.svg" alt="MX" height="25px">
+                        <a>MX (México)</a>
+                      </li>
+                    </ul>
+                  </div>
+                </ul>
+              </li>
+            </div>
+            <div class="col-0">
+              <li class="nav-item" >
+                <ul class="ms-auto ms-lg-0">
+                  <div class="dropdown" style="top:1;">
+                    <button type="button" class="btn btn-danger" style="top:10;">Suscribete</button>
+                  </div>
+                </ul>
+              </li>
+            </div>
+            <div class="col-0">
+              <li class="nav-item">
+                <ul class="ms-auto ms-0">
+                  <div class="dropdown" style="top:1;">
+                    <button type="menu" class="btn btn-light text-danger" style="border-color: #CACACA; top:10;">Iniciar Sesion</button>
+                  </div>
+                </ul>
+              </li>
+            </div>
+        </ul>
+      </div>
+    
     </div>
+
   </nav>
   <!--navbar secundaria roja-->
   <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
@@ -396,11 +369,25 @@
 
     <!--Cards de la primer captura-->
     <div class="row">
-      <div class="col-md-8">
+      <!-- <div class="col-md-8">
         <div class="card border-white">
           <img class="card-img-top" src="./assets/images/banners/Sub-photo-1.jpg" />
           <div class="card-img-overlay position-sticky-bottom">
             <h5 class="card-title">Card title</h5>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">CONTRATRÓNICA</h5>
+          </div>
+        </div>
+      </div> -->
+      <div class="col-md-8">
+        <div class="card border-white">
+          <img class="card-img-top" src="./assets/images/banners/Sub-photo-1.jpg" />
+          <div class="card-img-overlay">
+            <h5 class="card-title"><span class="badge bg-primary">Nuevo</span></h5>
+            
+            <p class="card-text align-bottom">Last updated 3 mins ago</p>
+            <p class="card-footer justify-content-bottom align-bottom d-flex text-white">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
           </div>
           <div class="card-body">
             <h5 class="card-title">CONTRATRÓNICA</h5>
@@ -730,6 +717,7 @@
 </body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
   integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/fc3fec0390.js" crossorigin="anonymous"></script>
 <script>
   let elementAutoHidded = document.querySelector('.autohide');
   let navbarHeight = document.querySelector('.navbar').offsetHeight;
